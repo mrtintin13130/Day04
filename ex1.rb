@@ -41,16 +41,31 @@ puts "Nombre de Handle debutant par une majuscule : #{n}"
 
 n = 0
 x = 0
-y = 1
 while handle[x]
 	if handle[x] =~ /[A-Z]/
 		x += 1
-		y = 1
 		n += 1
-	elsif handle[x][y]
-		y += 1
 	else
 		x += 1
 	end
 end
 puts "Nombre de Handle contenant une majuscule : #{n}"
+
+n = 0
+x = 0
+y = 1
+while handle[x]
+        if handle[x] =~ /_/
+                x += 1
+                y = 1
+                n += 1
+        elsif handle[x][y]
+                y += 1
+        else
+                x += 1
+        end
+end
+puts "Nombre de Handle contenant un \"_\" : #{n}"
+
+puts "Tri par ordre alphabétique :"
+puts handle.sort
