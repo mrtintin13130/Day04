@@ -30,14 +30,17 @@ puts "Nombre de Handle contenant \"Aude\" : #{n}"
 
 n = 0
 x = 0
+y = 1
 
 while handle[x]
-	if handle[x] == handle[x].capitalize
+	if handle[x][y] =~ /[A-Z]/
 		n += 1
 	end
 	x += 1
 end
 puts "Nombre de Handle debutant par une majuscule : #{n}"
+
+
 
 n = 0
 x = 0
@@ -50,6 +53,8 @@ while handle[x]
 	end
 end
 puts "Nombre de Handle contenant une majuscule : #{n}"
+
+
 
 n = 0
 x = 0
